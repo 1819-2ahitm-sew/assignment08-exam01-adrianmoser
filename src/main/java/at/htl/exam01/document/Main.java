@@ -4,26 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[] secondBook = {"Tolkien", "lordOfTheRings"};
+        String[] firstBook = {"Rowlings", "Harry Potter und der Stein der Weisen"};
         String[] email = {"Susi", "Bewerbung", "CoolCompany"};
+        String[] secondBook = {"Tolkien", "lordOfTheRings"};
+
+        String[] documents = new String[2];
     }
 
-    public String[] fBook(String[] firstBook) {
-        firstBook = new String[]{"Rowlings", "Harry Potter und der Stein der Weisen"};
-
-        return firstBook;
-    }
-
-    public String[] sBook(String[] secondBook) {
-        secondBook = new String[]{"Rowlings", "Harry Potter und der Stein der Weisen"};
-
-        return secondBook;
-    }
-
-    public String[] mail(String[] email) {
-        email = new String[]{"Rowlings", "Harry Potter und der Stein der Weisen"};
-
-        return email;
+    public String Document(String author) {
+        return null;
     }
 
 
