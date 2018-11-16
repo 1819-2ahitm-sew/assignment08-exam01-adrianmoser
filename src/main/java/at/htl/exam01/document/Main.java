@@ -2,6 +2,32 @@ package at.htl.exam01.document;
 
 public class Main {
 
+    public static void main(String[] args) {
+
+        String[] secondBook = {"Tolkien", "lordOfTheRings"};
+        String[] email = {"Susi", "Bewerbung", "CoolCompany"};
+    }
+
+    public String[] fBook(String[] firstBook) {
+        firstBook = new String[]{"Rowlings", "Harry Potter und der Stein der Weisen"};
+
+        return firstBook;
+    }
+
+    public String[] sBook(String[] secondBook) {
+        secondBook = new String[]{"Rowlings", "Harry Potter und der Stein der Weisen"};
+
+        return secondBook;
+    }
+
+    public String[] mail(String[] email) {
+        email = new String[]{"Rowlings", "Harry Potter und der Stein der Weisen"};
+
+        return email;
+    }
+
+
+
     /**
      *
      * Führen Sie hier folgendes durch:
@@ -21,10 +47,7 @@ public class Main {
      *
      * @param args
      */
-    public static void main(String[] args) {
 
-
-    }
 
 
 }

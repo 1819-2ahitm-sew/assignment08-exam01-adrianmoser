@@ -42,8 +42,19 @@ public class StringCompress {
      */
     public String[] readFromFile(String fileName) {
 
+        String[] zeilen = new String[getNoOfLines(fileName)];
+        int counter = 0;
 
-        return null;
+        try (Scanner scanner = new Scanner(new FileReader(fileName))) {
+            while (scanner.hasNextLine()) {
+                zeilen[counter] = scanner.nextLine();
+                counter++;
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println(e.getMessage());
+        }
+
+        return zeilen;
     }
 
 
@@ -65,7 +76,16 @@ public class StringCompress {
      */
     public int getNoOfLines(String fileName) {
 
+        int anzahl = 0;
 
-        return -1;
+        try (Scanner scanner = new Scanner(new FileReader(fileName))) {
+            while (scanner.hasNextLine()) {
+                scanner.nextLine();
+                anzahl++;
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println(e.getMessage());
+        }
+        return anzahl;
     }
 }
