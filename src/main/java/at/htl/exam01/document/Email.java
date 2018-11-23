@@ -1,16 +1,28 @@
 package at.htl.exam01.document;
 
-public class Email {
+public class Email extends Document {
 
-    public Email(String author, String subject, String to) {
+    private String subject;
+    private String to;
 
+    public Email() {
     }
 
+    public Email(String author, String subject, String to) {
+        super(author);
+
+        this.subject = subject;
+        this.to = to;
+    }
+
+
     public String getSubject() {
-        return null;
+        return subject;
     }
 
     public String getTo() {
-        return null;
+        return to;
     }
+
+
 }

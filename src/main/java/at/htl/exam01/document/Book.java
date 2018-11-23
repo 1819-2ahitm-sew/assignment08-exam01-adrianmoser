@@ -1,15 +1,17 @@
 package at.htl.exam01.document;
 
-public class Book {
+public class Book extends Document {
 
-    String author, title;
+    private String title;
+
 
     public Book(String author, String title) {
-        this.author = author;
+        super(author);
+
         this.title = title;
     }
 
     public String getTitle() {
-        return null;
+        return title;
     }
 }

@@ -20,7 +20,6 @@ public class StringCompress {
         sc.print(text);
     }
 
-
     /**
      *
      * Sämtliche Zeilen werden aus der Textdatei eingelesen
@@ -57,7 +56,6 @@ public class StringCompress {
         return zeilen;
     }
 
-
     /**
      * Der Inhalt des String-Arrays wird zeilenweise auf der Console ausgegeben
      *
@@ -66,6 +64,17 @@ public class StringCompress {
      */
     public void print(String[] lines) {
 
+        char buchstabe;
+        int zahl;
+
+        for (int i = 0; i < lines.length; i++) {
+            buchstabe = lines[i].charAt(0);
+            zahl = Integer.valueOf(lines[i].substring(1));
+            for (int j = 0; j < zahl; j++) {
+                System.out.print(buchstabe);
+            }
+            System.out.println();
+        }
     }
 
     /**

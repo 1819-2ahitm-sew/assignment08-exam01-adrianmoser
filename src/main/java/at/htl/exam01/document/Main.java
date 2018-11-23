@@ -4,18 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[] firstBook = {"Rowlings", "Harry Potter und der Stein der Weisen"};
-        String[] email = {"Susi", "Bewerbung", "CoolCompany"};
-        String[] secondBook = {"Tolkien", "lordOfTheRings"};
+        Book book = new Book("Rowlings", "Harry Potter und der Stein der Weisen");
+        Email email = new Email("Susi", "Bewerbung", "CoolCompany");
+        Book book2 = new Book("Tolkien", "lordOfTheRings");
 
-        String[] documents = new String[2];
+        Document[] docs = { book, email, book2 };
+
+        for (int i = 0; i < docs.length; i++) {
+            if (docs[i] instanceof Book) {
+                System.out.println("Book: ");
+            }
+        }
     }
-
-    public String Document(String author) {
-        return null;
-    }
-
-
 
     /**
      *
