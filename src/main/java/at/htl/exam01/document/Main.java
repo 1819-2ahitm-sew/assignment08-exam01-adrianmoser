@@ -4,39 +4,31 @@ public class Main {
 
     public static void main(String[] args) {
 
+        int eCounter = 0;
+        int bCounter = 0;
+
         Book book = new Book("Rowlings", "Harry Potter und der Stein der Weisen");
         Email email = new Email("Susi", "Bewerbung", "CoolCompany");
-        Book book2 = new Book("Tolkien", "lordOfTheRings");
+        Book book1 = new Book("Tolkien", "lordOfTheRings");
 
-        Document[] docs = { book, email, book2 };
+        Document[] docs = new Document[3];
+
+        docs[0] = book;
+        docs[1] = email;
+        docs[2] = book1;
 
         for (int i = 0; i < docs.length; i++) {
+            System.out.println(docs[i]);
             if (docs[i] instanceof Book) {
-                System.out.println("Book: ");
+                bCounter++;
+            } else {
+                eCounter++;
             }
         }
+        System.out.println();
+
+        System.out.printf("Anzahl Books: %d%n", bCounter);
+        System.out.printf("Anzahl Emails: %d", eCounter);
+
     }
-
-    /**
-     *
-     * Führen Sie hier folgendes durch:
-     *
-     * 1. Erstellen Sie 2 Bücher und ein email
-     *    Buch: "Rowlings", "Harry Potter und der Stein der Weisen"
-     *    Email: "Susi", "Bewerbung", "CoolCompany"
-     *    Buch: "Tolkien", "lordOfTheRings"
-     *
-     * 2. Erstellen Sie ein Document-Array und speichern Sie obige Dokumente in diesem Array.
-     *
-     * 3. Geben Sir die Inhalte dieser Documente wie folgt aus.
-     *    Nutzen Sie dabei die Mechanismen der Vererbung.
-     *    Erstellen Sie außerdem geeignete toString-Methoden
-     *
-     * 4. Zählen Sie die Bücher und emails im Array und geben Sie die jeweilige Anzahl aus.
-     *
-     * @param args
-     */
-
-
-
 }
